@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Hello, GitHub CI/CD!"
+    return f"Secret Key: {os.getenv('API_KEY', 'No Secret')}"
 
 if __name__ == '__main__':
     print("🔥 Starting Flask server on http://0.0.0.0:5000/")
